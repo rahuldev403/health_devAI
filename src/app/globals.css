@@ -1,0 +1,217 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  /* Base Variables */
+  --radius: 0.625rem;
+
+  /* White and Orange Theme Colors */
+  --background: #ffffff; /* White background */
+  --foreground: #333333; /* Dark text for contrast */
+  
+  /* Card and popover elements */
+  --card: #f9f9f9; /* Light card background */
+  --card-foreground: #333333; /* Dark text on card */
+  --popover: #f9f9f9; /* Light popover background */
+  --popover-foreground: #333333; /* Dark text on popover */
+
+  /* Primary - Main orange */
+  --primary: #ff5722; /* Orange */
+  --primary-foreground: #ffffff; /* White text on primary */
+
+  /* Secondary - Darker orange */
+  --secondary: #e64a19; /* Darker orange */
+  --secondary-foreground: #ffffff; /* White text on secondary */
+
+  /* Accent - Light orange */
+  --accent: #ffccbc; /* Light orange */
+  --accent-foreground: #333333; /* Dark text on accent */
+
+  /* Muted elements */
+  --muted: #f0f0f0; /* Muted background */
+  --muted-foreground: #757575; /* Muted text */
+
+  /* System colors */
+  --destructive: #ef4444; /* Red for destructive actions */
+  --border: rgba(0, 0, 0, 0.1); /* Light border */
+  --input: rgba(0, 0, 0, 0.1); /* Light input background */
+  --ring: #ff5722; /* Orange ring color */
+
+  /* Chart colors - white and orange theme */
+  --chart-1: #ff5722; /* Orange */
+  --chart-2: #ffccbc; /* Light orange */
+  --chart-3: #e64a19; /* Darker orange */
+  --chart-4: #ffab40; /* Lighter orange */
+  --chart-5: #ff7043; /* Soft orange */
+
+  /* Sidebar colors */
+  --sidebar: #ffffff; /* White sidebar */
+  --sidebar-foreground: #333333; /* Dark text in sidebar */
+  --sidebar-primary: #ff5722; /* Orange primary in sidebar */
+  --sidebar-primary-foreground: #ffffff; /* White text in sidebar primary */
+  --sidebar-accent: #ffccbc; /* Light orange accent */
+  --sidebar-accent-foreground: #333333; /* Dark text in sidebar accent */
+  --sidebar-border: rgba(0, 0, 0, 0.1); /* Light border for sidebar */
+  --sidebar-ring: #ff5722; /* Orange ring for sidebar */
+}
+
+.dark {
+  /* Background */
+  --background: #333333; /* Dark background */
+  --foreground: #f2f2f2; /* Light text for dark mode */
+
+  /* Card and popover elements */
+  --card: #444444; /* Dark card background */
+  --card-foreground: #f2f2f2; /* Light text on card */
+  --popover: #444444; /* Dark popover background */
+  --popover-foreground: #f2f2f2; /* Light text on popover */
+
+  /* Primary - Main orange */
+  --primary: #ff5722; /* Orange */
+  --primary-foreground: #ffffff; /* White text on primary */
+
+  /* Secondary - Darker orange */
+  --secondary: #e64a19; /* Darker orange */
+  --secondary-foreground: #ffffff; /* White text on secondary */
+
+  /* Accent - Light orange */
+  --accent: #ffccbc; /* Light orange */
+  --accent-foreground: #333333; /* Dark text on accent */
+
+  /* Muted elements */
+  --muted: #1e293b; /* Dark muted background */
+  --muted-foreground: #94a3b8; /* Light muted text */
+
+  /* System colors */
+  --destructive: #ef4444; /* Red for destructive actions */
+  --border: rgba(0, 0, 0, 0.2); /* Dark border */
+  --input: rgba(0, 0, 0, 0.2); /* Dark input background */
+  --ring: #ff5722; /* Orange ring color */
+
+  /* Chart colors - dark mode */
+  --chart-1: #ff5722; /* Orange */
+  --chart-2: #ffccbc; /* Light orange */
+  --chart-3: #e64a19; /* Darker orange */
+  --chart-4: #ffab40; /* Lighter orange */
+  --chart-5: #ff7043; /* Soft orange */
+
+  /* Sidebar colors */
+  --sidebar: #333333; /* Dark sidebar */
+  --sidebar-foreground: #f2f2f2; /* Light text in sidebar */
+  --sidebar-primary: #ff5722; /* Orange primary in sidebar */
+  --sidebar-primary-foreground: #ffffff; /* White text in sidebar primary */
+  --sidebar-accent: #ffccbc; /* Light orange accent */
+  --sidebar-accent-foreground: #333333; /* Dark text in sidebar accent */
+  --sidebar-border: rgba(0, 0, 0, 0.2); /* Dark border for sidebar */
+  --sidebar-ring: #ff5722; /* Orange ring for sidebar */
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+@keyframes scanline {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+@keyframes slow-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-scanline {
+  animation: scanline 8s linear infinite;
+}
+
+.animate-slow-spin {
+  animation: slow-spin 12s linear infinite;
+}
+
+@keyframes sound-wave {
+  0% {
+    height: 10%;
+  }
+  50% {
+    height: 100%;
+  }
+  100% {
+    height: 10%;
+  }
+}
+
+.animate-sound-wave {
+  animation: sound-wave 1.2s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
